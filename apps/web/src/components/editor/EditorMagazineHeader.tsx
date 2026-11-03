@@ -328,11 +328,6 @@ export const EditorMagazineHeader = ({
                     useSolidAccent
                       ? {
                           width: "146px",
-                          boxSizing: "border-box",
-                          flexShrink: 0,
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "stretch",
                           textAlign: "left",
                           background: "linear-gradient(135deg, var(--note-palette-accent, #374151), color-mix(in srgb, var(--note-palette-accent, #374151) 80%, #ffffff))",
                           border: "1px solid transparent",
@@ -342,11 +337,6 @@ export const EditorMagazineHeader = ({
                         }
                       : {
                           width: "146px",
-                          boxSizing: "border-box",
-                          flexShrink: 0,
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "stretch",
                           textAlign: "left",
                           background: isHighlighted ? "#f3f4f6" : "#ffffff",
                           border: "1px solid #e5e7eb",
@@ -360,7 +350,6 @@ export const EditorMagazineHeader = ({
                   <div
                     style={{
                       fontSize: "9px",
-                      lineHeight: 1.4,
                       fontWeight: 700,
                       color: useSolidAccent ? "rgba(255, 255, 255, 0.72)" : "#6b7280",
                       letterSpacing: "1px",
@@ -388,7 +377,9 @@ export const EditorMagazineHeader = ({
                       fontSize: "10px",
                       color: useSolidAccent ? "rgba(255, 255, 255, 0.75)" : "#6b7280",
                       lineHeight: 1.4,
-                      wordBreak: "break-word",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {section.subTitle}
